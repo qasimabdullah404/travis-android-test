@@ -2,7 +2,7 @@ dist: focal
 
 language: android
 
-jdk: openjdk11
+jdk: openjdk8
 
 android:
   components:
@@ -18,15 +18,10 @@ android:
     # The libraries we can't get from Maven Central or similar
     - extra
 
-branches:
-  except:
-  - /^v\..*$/ # Exclude version tags
-
 notifications:
   email: true
 
 before_install:
-- export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 - echo yes | sdkmanager "platforms;android-30"
 
 script: true
