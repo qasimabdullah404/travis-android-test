@@ -21,7 +21,7 @@ before_install:
   - mkdir -p $HOME/.android && touch $HOME/.android/repositories.cfg
 install:
   # accept licenses for all available packages that have not already been accepted
-  - yes | sdkmanager --licenses >/dev/null
+  - echo yes | sdkmanager --licenses >/dev/null
 before_script:
   # set executable flag for gradle wrapper
   - chmod +x gradlew
