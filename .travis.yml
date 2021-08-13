@@ -27,3 +27,5 @@ notifications:
 
 before_install:
 - echo yes | sdkmanager "platforms;android-30"
+
+script: true
