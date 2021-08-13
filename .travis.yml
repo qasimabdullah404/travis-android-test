@@ -1,0 +1,29 @@
+dist: focal
+
+language: android
+
+jdk: openjdk11
+
+android:
+  components:
+
+    # All the build system components should be at the latest version
+    - tools
+    - platform-tools
+    - tools
+    # Note that the tools section appears twice on purpose as it’s required
+    # to get the newest Android SDK tools. Source: Travis CI docs.
+    - build-tools-30.0.3
+
+    # The libraries we can't get from Maven Central or similar
+    - extra
+
+branches:
+  except:
+  - /^v\..*$/ # Exclude version tags
+
+notifications:
+  email: true
+
+before_install:
+- echo yes | sdkmanager "platforms;android-30"
