@@ -22,6 +22,7 @@ notifications:
   email: true
 
 before_install:
+- export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 - echo yes | sdkmanager "platforms;android-30"
 
 script: true
