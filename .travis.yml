@@ -2,7 +2,7 @@ dist: focal
 
 language: android
 
-jdk: openjdk8
+jdk: openjdk9
 
 android:
   components:
