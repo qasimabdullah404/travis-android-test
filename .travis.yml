@@ -2,7 +2,7 @@ dist: focal
 
 language: android
 
-jdk: openjdk9
+jdk: openjdk11
 
 android:
   components:
@@ -19,14 +19,6 @@ android:
     - extra
 
 before_install:
-- export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 - echo yes | sdkmanager "platforms;android-30"
 
 script: true
-
-notifications:
-  email:
-    recipients:
-      - qasim.abdullah@travis-ci.org
-    on_success: always
-    on_failure: always
