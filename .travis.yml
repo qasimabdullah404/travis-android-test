@@ -22,4 +22,4 @@ before_install:
 before_script:
  - chmod +x gradlew
 script:
-- ./gradlew your_command_here
+- ./gradlew build --scan -s
